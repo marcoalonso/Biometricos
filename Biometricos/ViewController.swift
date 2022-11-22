@@ -10,6 +10,8 @@ import LocalAuthentication
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var biometricTypeLabel: UILabel!
+    @IBOutlet weak var biometricTypeButton: UIButton!
     @IBOutlet weak var faceOrTouch: UIImageView!
     
     let contexto = LAContext()
@@ -33,10 +35,16 @@ class ViewController: UIViewController {
         switch contexto.biometryType {
         case .faceID:
             print("Face ID")
-            faceOrTouch.image = UIImage(named: "face")
+//            faceOrTouch.image = UIImage(named: "face")
+            biometricTypeLabel.text = "Autenticar con Face ID"
+            biometricTypeButton.setBackgroundImage(UIImage(named: "face"), for: .normal)
+            biometricTypeButton.setBackgroundImage(UIImage(named: "face"), for: .selected)
         case .touchID:
             print("Touch ID")
-            faceOrTouch.image = UIImage(named: "touch")
+//            faceOrTouch.image = UIImage(named: "touch")
+            biometricTypeLabel.text = "Autenticar con Touch ID"
+            biometricTypeButton.setBackgroundImage(UIImage(named: "touch"), for: .normal)
+            biometricTypeButton.setBackgroundImage(UIImage(named: "touch"), for: .selected)
         case .none:
             print("No esta configurado")
             print("Iniciar sesion con contraseña")

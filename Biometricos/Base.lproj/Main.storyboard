@@ -18,46 +18,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KyJ-ar-6Vw">
-                                <rect key="frame" x="40" y="68" width="334" height="216"/>
+                                <rect key="frame" x="40" y="68" width="334" height="594"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touch" translatesAutoresizingMaskIntoConstraints="NO" id="OZW-3u-BsF">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biom" translatesAutoresizingMaskIntoConstraints="NO" id="OZW-3u-BsF">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="bCR-sO-LlB"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Gx5-Lm-XfI">
-                                        <rect key="frame" x="0.0" y="100" width="334" height="116"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Gx5-Lm-XfI">
+                                        <rect key="frame" x="0.0" y="100" width="334" height="220"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1z-u0-OZz">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
-                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autenticar con " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLC-4O-CHQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="60"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="erq-dM-9Ht"/>
+                                                    <constraint firstAttribute="height" constant="60" id="AKc-IQ-oeG"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Autenticar"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <integer key="value" value="25"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="autenticarButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n8y-D2-qWg"/>
-                                                </connections>
-                                            </button>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYh-O0-JLx">
+                                                <rect key="frame" x="0.0" y="80" width="334" height="60"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1z-u0-OZz">
+                                                        <rect key="frame" x="129.5" y="-7.5" width="75" height="75"/>
+                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="75" id="erq-dM-9Ht"/>
+                                                            <constraint firstAttribute="width" constant="75" id="pbd-BE-1VO"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title=" "/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="autenticarButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n8y-D2-qWg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="H1z-u0-OZz" firstAttribute="centerY" secondItem="fYh-O0-JLx" secondAttribute="centerY" id="MDc-d7-xr5"/>
+                                                    <constraint firstItem="H1z-u0-OZz" firstAttribute="centerX" secondItem="fYh-O0-JLx" secondAttribute="centerX" id="eT6-gc-tdh"/>
+                                                </constraints>
+                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkc-ng-ooM">
-                                                <rect key="frame" x="0.0" y="66" width="334" height="50"/>
+                                                <rect key="frame" x="0.0" y="160" width="334" height="60"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Código de seguridad" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vUs-cZ-tK6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="60"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
                                                     </textField>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f7L-pW-20i">
-                                                        <rect key="frame" x="50" y="44" width="234" height="1"/>
+                                                        <rect key="frame" x="50" y="54" width="234" height="1"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="tnd-wF-bLi"/>
@@ -76,10 +95,11 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="116" id="yNU-66-Mca"/>
-                                        </constraints>
                                     </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7Q-eP-B6W">
+                                        <rect key="frame" x="0.0" y="340" width="334" height="254"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -87,11 +107,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KyJ-ar-6Vw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="LIm-ij-QaP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KyJ-ar-6Vw" secondAttribute="bottom" constant="200" id="Sr4-xB-AWK"/>
                             <constraint firstItem="KyJ-ar-6Vw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="eqj-0y-vBr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KyJ-ar-6Vw" secondAttribute="trailing" constant="40" id="scR-5f-vz8"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="biometricTypeButton" destination="H1z-u0-OZz" id="KCr-cl-kdQ"/>
+                        <outlet property="biometricTypeLabel" destination="RLC-4O-CHQ" id="AEG-6I-4qn"/>
                         <outlet property="faceOrTouch" destination="OZW-3u-BsF" id="16V-1F-KLB"/>
                         <segue destination="7kI-pt-nT8" kind="show" identifier="login" id="zon-Ap-CQN"/>
                     </connections>
@@ -132,8 +155,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="biom" width="830" height="553"/>
         <image name="house" catalog="system" width="128" height="104"/>
-        <image name="touch" width="1024" height="1104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
