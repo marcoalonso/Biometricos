@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15B16D3CE48BE35C2261714F /* Pods_Biometricos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B1608DB5C30E8F5A620A1F /* Pods_Biometricos.framework */; };
 		6C3AD5FC292A859800BE8E21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3AD5FB292A859800BE8E21 /* AppDelegate.swift */; };
 		6C3AD5FE292A859800BE8E21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3AD5FD292A859800BE8E21 /* SceneDelegate.swift */; };
 		6C3AD600292A859800BE8E21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3AD5FF292A859800BE8E21 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01A17FE2356966BC68244408 /* Pods-Biometricos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Biometricos.release.xcconfig"; path = "Target Support Files/Pods-Biometricos/Pods-Biometricos.release.xcconfig"; sourceTree = "<group>"; };
+		084C3DC7EB651E9130ACA13C /* Pods-Biometricos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Biometricos.debug.xcconfig"; path = "Target Support Files/Pods-Biometricos/Pods-Biometricos.debug.xcconfig"; sourceTree = "<group>"; };
 		6C3AD5F8292A859800BE8E21 /* Biometricos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biometricos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3AD5FB292A859800BE8E21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C3AD5FD292A859800BE8E21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		6C3AD604292A85A000BE8E21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C3AD607292A85A000BE8E21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C3AD609292A85A000BE8E21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3B1608DB5C30E8F5A620A1F /* Pods_Biometricos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Biometricos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15B16D3CE48BE35C2261714F /* Pods_Biometricos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		388B5FA43074F34788D7B0B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3B1608DB5C30E8F5A620A1F /* Pods_Biometricos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6C3AD5EF292A859800BE8E21 = {
 			isa = PBXGroup;
 			children = (
 				6C3AD5FA292A859800BE8E21 /* Biometricos */,
 				6C3AD5F9292A859800BE8E21 /* Products */,
+				DFCA60DC50BAFBD907B2D340 /* Pods */,
+				388B5FA43074F34788D7B0B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = Biometricos;
 			sourceTree = "<group>";
 		};
+		DFCA60DC50BAFBD907B2D340 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				084C3DC7EB651E9130ACA13C /* Pods-Biometricos.debug.xcconfig */,
+				01A17FE2356966BC68244408 /* Pods-Biometricos.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C3AD60C292A85A000BE8E21 /* Build configuration list for PBXNativeTarget "Biometricos" */;
 			buildPhases = (
+				21A1611AE20A63E04CF34995 /* [CP] Check Pods Manifest.lock */,
 				6C3AD5F4292A859800BE8E21 /* Sources */,
 				6C3AD5F5292A859800BE8E21 /* Frameworks */,
 				6C3AD5F6292A859800BE8E21 /* Resources */,
+				268251B85C9D0D360CA002ED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -103,7 +130,7 @@
 				};
 			};
 			buildConfigurationList = 6C3AD5F3292A859800BE8E21 /* Build configuration list for PBXProject "Biometricos" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21A1611AE20A63E04CF34995 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Biometricos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		268251B85C9D0D360CA002ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Biometricos/Pods-Biometricos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Biometricos/Pods-Biometricos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Biometricos/Pods-Biometricos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6C3AD5F4292A859800BE8E21 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		6C3AD60D292A85A000BE8E21 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 084C3DC7EB651E9130ACA13C /* Pods-Biometricos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +381,7 @@
 		};
 		6C3AD60E292A85A000BE8E21 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01A17FE2356966BC68244408 /* Pods-Biometricos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
