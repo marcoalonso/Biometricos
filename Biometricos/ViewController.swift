@@ -26,30 +26,43 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(teclado(notificacion:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(teclado(notificacion:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(teclado(notificacion:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-        
-        
-        
+//        customNotificationsKeyboard()
         codigoTextField.delegate = self
     }
     
-    @objc func teclado(notificacion: Notification){
-        guard let tecladoUp = (notificacion.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
-        //Si se abre el teclado
-        if notificacion.name == UIResponder.keyboardWillShowNotification {
-            self.view.frame.origin.y = -tecladoUp.height
+    func customNotificationsKeyboard(){
+        //        NotificationCenter.default.addObserver(self, selector: #selector(teclado(notificacion:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        //
+        //        NotificationCenter.default.addObserver(self, selector: #selector(teclado(notificacion:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        //
+        //        NotificationCenter.default.addObserver(self, selector: #selector(teclado(notificacion:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
+    //MARK: Helpers
+    
+    @objc func verPassword(){
+        codigoVisible = !codigoVisible
+        if codigoVisible {
+            verCodigo.image = UIImage(systemName: "eye")
+            codigoTextField.isSecureTextEntry = false
         } else {
-            self.view.frame.origin.y = 0 //regresar al ocultar teclado
+            verCodigo.image = UIImage(systemName: "eye.slash")
+            codigoTextField.isSecureTextEntry = true
         }
     }
+    
+//    @objc func teclado(notificacion: Notification){
+//        guard let tecladoUp = (notificacion.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+//        //Si se abre el teclado
+//        if notificacion.name == UIResponder.keyboardWillShowNotification {
+//            self.view.frame.origin.y = -tecladoUp.height
+//        } else {
+//            self.view.frame.origin.y = 0 //regresar al ocultar teclado
+//        }
+//    }
 
     override func awakeFromNib() {
         IQKeyboardManager.shared.toolbarDoneBarButtonItemText = "Aceptar"
-        
      }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,21 +78,11 @@ class ViewController: UIViewController {
         verCodigo.isUserInteractionEnabled = true
         verCodigo.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(verPassword)))
         verCodigo.image = UIImage(systemName: "eye.slash")
-        
         //Button Continuar
         continuarBtn.isHidden = true
     }
     
-    @objc func verPassword(){
-        codigoVisible = !codigoVisible
-        if codigoVisible {
-            verCodigo.image = UIImage(systemName: "eye")
-            codigoTextField.isSecureTextEntry = false
-        } else {
-            verCodigo.image = UIImage(systemName: "eye.slash")
-            codigoTextField.isSecureTextEntry = true
-        }
-    }
+   
     
     func evaluateBiometryType() {
         switch contexto.biometryType {
@@ -103,6 +106,7 @@ class ViewController: UIViewController {
             print("Desconocido")
         }
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
